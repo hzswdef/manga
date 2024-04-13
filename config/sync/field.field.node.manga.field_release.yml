@@ -1,0 +1,23 @@
+uuid: ba58107f-f745-431d-b548-46922fe6e496
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_release
+    - node.type.manga
+id: node.manga.field_release
+field_name: field_release
+entity_type: node
+bundle: manga
+label: Release
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1900
+  max: 2100
+  prefix: ''
+  suffix: ''
+field_type: integer

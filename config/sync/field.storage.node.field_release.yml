@@ -1,0 +1,20 @@
+uuid: fbccd055-107a-42ef-a482-aae3f56dc174
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_release
+field_name: field_release
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

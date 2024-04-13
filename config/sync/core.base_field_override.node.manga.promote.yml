@@ -1,0 +1,22 @@
+uuid: ded83378-6a74-45b2-a693-b1ac1733a43b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.manga
+id: node.manga.promote
+field_name: promote
+entity_type: node
+bundle: manga
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

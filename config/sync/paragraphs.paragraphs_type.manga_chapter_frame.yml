@@ -1,0 +1,10 @@
+uuid: adc76501-716e-4f3f-aac4-247aa4cc0033
+langcode: en
+status: true
+dependencies: {  }
+id: manga_chapter_frame
+label: 'Manga - Chapter - Frame'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,34 @@
+uuid: 69713a4e-a637-498b-a990-b855d0fe27d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chapters
+    - node.type.manga
+    - paragraphs.paragraphs_type.manga_chapter
+  module:
+    - entity_reference_revisions
+id: node.manga.field_chapters
+field_name: field_chapters
+entity_type: node
+bundle: manga
+label: Chapters
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      manga_chapter: manga_chapter
+    negate: 0
+    target_bundles_drag_drop:
+      manga_chapter:
+        weight: 3
+        enabled: true
+      manga_chapter_frame:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

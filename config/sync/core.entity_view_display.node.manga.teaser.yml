@@ -1,0 +1,34 @@
+uuid: 9515bff5-1425-4b34-985c-61828a5133c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.manga.field_alternative_titles
+    - field.field.node.manga.field_chapters
+    - field.field.node.manga.field_description
+    - field.field.node.manga.field_release
+    - field.field.node.manga.field_status
+    - field.field.node.manga.field_thumbnail
+    - field.field.node.manga.field_type
+    - node.type.manga
+  module:
+    - user
+id: node.manga.teaser
+targetEntityType: node
+bundle: manga
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_alternative_titles: true
+  field_chapters: true
+  field_description: true
+  field_release: true
+  field_status: true
+  field_thumbnail: true
+  field_type: true

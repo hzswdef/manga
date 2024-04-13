@@ -1,0 +1,23 @@
+uuid: 89eeb188-6af8-4c6b-978a-d414d05ac01a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status
+    - node.type.manga
+  module:
+    - options
+id: node.manga.field_status
+field_name: field_status
+entity_type: node
+bundle: manga
+label: Status
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: finished
+default_value_callback: ''
+settings: {  }
+field_type: list_string

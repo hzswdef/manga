@@ -1,0 +1,19 @@
+uuid: 820fd9fd-0432-442a-94f1-8e3f8e5883c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_titles
+    - node.type.manga
+id: node.manga.field_alternative_titles
+field_name: field_alternative_titles
+entity_type: node
+bundle: manga
+label: 'Alternative Titles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

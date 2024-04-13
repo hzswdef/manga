@@ -1,0 +1,38 @@
+uuid: d81878d6-5019-4383-83d9-30a6f800cbd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_frame
+    - paragraphs.paragraphs_type.manga_chapter_frame
+  module:
+    - image
+id: paragraph.manga_chapter_frame.field_frame
+field_name: field_frame
+entity_type: paragraph
+bundle: manga_chapter_frame
+label: Frame
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: '8 MB'
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

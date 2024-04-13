@@ -1,0 +1,24 @@
+uuid: 3fd3dafd-ed46-4062-ad45-54e0c6dc96cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.manga_chapter.field_frames
+    - paragraphs.paragraphs_type.manga_chapter
+  module:
+    - entity_reference_revisions
+id: paragraph.manga_chapter.default
+targetEntityType: paragraph
+bundle: manga_chapter
+mode: default
+content:
+  field_frames:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

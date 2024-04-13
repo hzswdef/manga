@@ -1,0 +1,26 @@
+uuid: 8374a04d-c90d-4a5a-b7fe-700b5edb82b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.manga_chapter_frame.field_frame
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.manga_chapter_frame
+  module:
+    - image
+id: paragraph.manga_chapter_frame.default
+targetEntityType: paragraph
+bundle: manga_chapter_frame
+mode: default
+content:
+  field_frame:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

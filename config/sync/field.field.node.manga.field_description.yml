@@ -1,0 +1,19 @@
+uuid: 1a31dc19-d3af-4c02-9055-5c3497e790a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.manga
+id: node.manga.field_description
+field_name: field_description
+entity_type: node
+bundle: manga
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,22 @@
+uuid: ef37cee8-a6f8-4ae7-9ea7-0678df7df576
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: manga
+label: Manga
+type: 'canonical_entities:node'
+pattern: 'manga/[node:title]'
+selection_criteria:
+  5f9779fb-1e6c-4f62-bae9-d53e86216357:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 5f9779fb-1e6c-4f62-bae9-d53e86216357
+    context_mapping:
+      node: node
+    bundles:
+      manga: manga
+selection_logic: and
+weight: -5
+relationships: {  }

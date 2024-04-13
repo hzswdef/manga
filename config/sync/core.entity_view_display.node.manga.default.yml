@@ -1,0 +1,87 @@
+uuid: 1cfbadbb-2649-413b-a6e8-459e4b3644d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.manga.field_alternative_titles
+    - field.field.node.manga.field_chapters
+    - field.field.node.manga.field_description
+    - field.field.node.manga.field_release
+    - field.field.node.manga.field_status
+    - field.field.node.manga.field_thumbnail
+    - field.field.node.manga.field_type
+    - node.type.manga
+  module:
+    - entity_reference_revisions
+    - image
+    - options
+    - user
+id: node.manga.default
+targetEntityType: node
+bundle: manga
+mode: default
+content:
+  field_alternative_titles:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_chapters:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_release:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_status:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_thumbnail:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

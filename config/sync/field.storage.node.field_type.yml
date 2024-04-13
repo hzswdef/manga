@@ -1,0 +1,33 @@
+uuid: 969b75d0-1c38-4e55-a50e-2dc1d4313abb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type
+field_name: field_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: manga
+      label: Manga
+    -
+      value: mn
+      label: Manhwa
+    -
+      value: manhua
+      label: Manhua
+    -
+      value: oel_manga
+      label: OEL-Manga
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

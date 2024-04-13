@@ -1,0 +1,10 @@
+uuid: c2f9a71e-da5f-43e8-8678-7bc6c637a7eb
+langcode: en
+status: true
+dependencies: {  }
+id: manga_chapter
+label: 'Manga - Chapter'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

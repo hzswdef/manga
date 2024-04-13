@@ -1,0 +1,26 @@
+uuid: 076b1235-f761-4a91-bca8-fb6182f4695c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.manga_chapter_frame.field_frame
+    - paragraphs.paragraphs_type.manga_chapter_frame
+  module:
+    - image
+id: paragraph.manga_chapter_frame.default
+targetEntityType: paragraph
+bundle: manga_chapter_frame
+mode: default
+content:
+  field_frame:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

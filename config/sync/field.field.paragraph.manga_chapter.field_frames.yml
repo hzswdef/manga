@@ -1,0 +1,34 @@
+uuid: cb62e20d-d7d6-4d52-90d7-6f946a8ebb70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_frames
+    - paragraphs.paragraphs_type.manga_chapter
+    - paragraphs.paragraphs_type.manga_chapter_frame
+  module:
+    - entity_reference_revisions
+id: paragraph.manga_chapter.field_frames
+field_name: field_frames
+entity_type: paragraph
+bundle: manga_chapter
+label: Frames
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      manga_chapter_frame: manga_chapter_frame
+    negate: 0
+    target_bundles_drag_drop:
+      manga_chapter:
+        weight: 3
+        enabled: false
+      manga_chapter_frame:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions
