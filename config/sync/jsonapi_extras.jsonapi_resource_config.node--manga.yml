@@ -4,6 +4,11 @@ status: true
 dependencies:
   config:
     - node.type.manga
+  module:
+    - jsonapi_defaults
+third_party_settings:
+  jsonapi_defaults:
+    page_limit: 50
 id: node--manga
 disabled: false
 path: manga
@@ -22,7 +27,7 @@ resourceFields:
     enhancer:
       id: ''
   vid:
-    disabled: false
+    disabled: true
     fieldName: vid
     publicName: vid
     enhancer:
@@ -34,7 +39,7 @@ resourceFields:
     enhancer:
       id: ''
   type:
-    disabled: false
+    disabled: true
     fieldName: type
     publicName: type
     enhancer:
@@ -156,7 +161,7 @@ resourceFields:
   field_status:
     disabled: false
     fieldName: field_status
-    publicName: status
+    publicName: manga_status
     enhancer:
       id: ''
   field_thumbnail:
@@ -168,6 +173,6 @@ resourceFields:
   field_type:
     disabled: false
     fieldName: field_type
-    publicName: type
+    publicName: manga_type
     enhancer:
       id: ''

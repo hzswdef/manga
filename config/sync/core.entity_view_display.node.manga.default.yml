@@ -27,7 +27,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 107
+    weight: 6
     region: content
   field_chapters:
     type: entity_reference_revisions_entity_view
@@ -36,14 +36,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 106
+    weight: 7
     region: content
   field_description:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_release:
     type: number_integer
@@ -52,14 +52,14 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 103
+    weight: 3
     region: content
   field_status:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 104
+    weight: 4
     region: content
   field_thumbnail:
     type: image
@@ -70,18 +70,18 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   field_type:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden: {  }

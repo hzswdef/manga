@@ -1,0 +1,25 @@
+@import "src/scss/responsive";
+
+.container {
+  max-width: 100%;
+  padding: 0;
+
+  @include bp-up(md) {
+    max-width: 720px;
+    padding: 0 12px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include bp-up(lg) {
+    max-width: 960px;
+  }
+
+  @include bp-up(xl) {
+    max-width: 1140px;
+  }
+
+  @include bp-up(xxl) {
+    max-width: 1320px;
+  }
+}

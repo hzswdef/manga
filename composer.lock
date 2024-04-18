@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebf860c3ae5bd929788ca71928e5b0cc",
+    "content-hash": "68bd53909b995c08cf2404eb5b957a60",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2037,6 +2037,102 @@
             }
         },
         {
+            "name": "drupal/jsonapi_include",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jsonapi_include.git",
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_include-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "f7b602c5deaeace49484dd4600f19e679df27642"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.7",
+                    "datestamp": "1689918136",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "zipme_hkt",
+                    "homepage": "https://www.drupal.org/user/368236"
+                }
+            ],
+            "description": "Add include data to json output",
+            "homepage": "https://www.drupal.org/project/jsonapi_include",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/jsonapi_include",
+                "issues": "https://www.drupal.org/project/issues/jsonapi_include"
+            }
+        },
+        {
+            "name": "drupal/jsonapi_links",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/jsonapi_links.git",
+                "reference": "1.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_links-1.0.4.zip",
+                "reference": "1.0.4",
+                "shasum": "04c2339f8ca0e8f0705e0e0e8ea43cf913b482b6"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.4",
+                    "datestamp": "1711667633",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ro-no-lo",
+                    "homepage": "https://www.drupal.org/user/174449"
+                },
+                {
+                    "name": "_tarik_",
+                    "homepage": "https://www.drupal.org/user/3686003"
+                }
+            ],
+            "description": "Removes all \"links\" attributes from the JSON:API responses.",
+            "homepage": "https://www.drupal.org/project/jsonapi_links",
+            "support": {
+                "source": "https://git.drupalcode.org/project/jsonapi_links"
+            }
+        },
+        {
             "name": "drupal/paragraphs",
             "version": "1.17.0",
             "source": {
@@ -2182,106 +2278,6 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
-            }
-        },
-        {
-            "name": "drupal/schemata",
-            "version": "1.0.0-beta3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/schemata.git",
-                "reference": "8.x-1.0-beta3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/schemata-8.x-1.0-beta3.zip",
-                "reference": "8.x-1.0-beta3",
-                "shasum": "be2cbbf357c3f4d126c8ffbf926432b5fe44e4ff"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10"
-            },
-            "require-dev": {
-                "drupal/coder": "^8.2",
-                "drupal/hal": "^1 || ^2",
-                "jakub-onderka/php-parallel-lint": "^0.9.2",
-                "justinrainbow/json-schema": "^5.2"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-beta3",
-                    "datestamp": "1670337727",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "scripts": {
-                "phpcs": [
-                    "phpcs --standard=tests/phpcs.xml"
-                ],
-                "phpcbf": [
-                    "phpcbf --standard=tests/phpcs.xml"
-                ],
-                "lint": [
-                    "parallel-lint -e php,module,install,profile,theme,inc --exclude vendor/ --blame ."
-                ],
-                "quality": [
-                    "@lint",
-                    "@phpcs"
-                ]
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Adam Ross",
-                    "homepage": "https://www.drupal.org/user/550110",
-                    "email": "grayside@gmail.com"
-                },
-                {
-                    "name": "febbraro",
-                    "homepage": "https://www.drupal.org/user/43670"
-                },
-                {
-                    "name": "Grayside",
-                    "homepage": "https://www.drupal.org/user/346868"
-                },
-                {
-                    "name": "HalfChem",
-                    "homepage": "https://www.drupal.org/user/1608382"
-                },
-                {
-                    "name": "jhedstrom",
-                    "homepage": "https://www.drupal.org/user/208732"
-                },
-                {
-                    "name": "mpotter",
-                    "homepage": "https://www.drupal.org/user/616192"
-                },
-                {
-                    "name": "richgerdes",
-                    "homepage": "https://www.drupal.org/user/3437973"
-                },
-                {
-                    "name": "tekante",
-                    "homepage": "https://www.drupal.org/user/640024"
-                }
-            ],
-            "description": "Facilitate generation of schema definitions of Drupal 8 data models.",
-            "homepage": "https://drupal.org/project/schemata",
-            "keywords": [
-                "Drupal",
-                "json",
-                "schema"
-            ],
-            "support": {
-                "source": "https://cgit.drupalcode.org/schemata",
-                "issues": "https://drupal.org/project/issues/schemata"
             }
         },
         {
@@ -7619,7 +7615,6 @@
         "drupal/gin": 5,
         "drupal/gin_toolbar": 5,
         "drupal/inline_entity_form": 5,
-        "drupal/schemata": 10,
         "drupal/ultimate_cron": 15
     },
     "prefer-stable": true,
