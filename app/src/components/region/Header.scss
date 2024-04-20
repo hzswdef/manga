@@ -1,7 +1,9 @@
-.header {
-  padding: 16px 0;
+@import "../../scss/responsive";
 
-  .logo {
+.header {
+  padding: 16px;
+
+  a.logo {
     width: fit-content;
     display: flex;
     align-items: center;
@@ -13,7 +15,8 @@
     }
 
     span {
-
+      font-size: 1.6rem;
+      color: #fff;
     }
   }
 }

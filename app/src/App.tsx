@@ -1,10 +1,10 @@
+import AppRoutes from "./routes/Routes";
 import Base from "./components/Base";
-import Routes from "./routes/Routes";
 
 function App() {
   return (
     <Base>
-      <Routes />
+      <AppRoutes />
     </Base>
   )
 }

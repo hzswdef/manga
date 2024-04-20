@@ -1,23 +1,17 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import HomePage from "../components/page/HomePage";
+import {Route, Routes} from "react-router-dom";
+import HomePage from "../components/page/home/HomePage";
+import MangaPage from "../components/page/manga/MangaPage";
+import NotFound from "../components/page/NotFound";
 
-const Routes = () => {
 
-  // Define routes accessible for anyone.
-  const mainRoute = [
-    {
-      path: "/",
-      element: <HomePage/>
-    },
-  ];
+const AppRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/manga/*" element={<MangaPage />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+}
 
-  // Routes.
-  const router = createBrowserRouter([
-    ...mainRoute,
-  ]);
-
-  // Provide the router configuration using RouterProvider
-  return <RouterProvider router={router} />;
-};
-
-export default Routes;
+export default AppRoutes;

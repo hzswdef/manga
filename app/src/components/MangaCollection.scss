@@ -1,0 +1,32 @@
+@import "../scss/responsive";
+
+.manga-collection {
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+
+    @media screen and (min-width: 420px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 16px 4%;
+    }
+
+    @include bp-up(sm) {
+      gap: 20px 5%;
+    }
+
+    @include bp-up(md) {
+      gap: 20px 2.667%;
+    }
+
+    @include bp-up(lg) {
+      gap: 24px 2.5%;
+    }
+
+    @include bp-up(xxl) {
+      gap: 24px 1.5%;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../scss/responsive";
+
+a.manga-collection-item {
+
+  @media screen and (min-width: 420px) {
+    flex-basis: 48%;
+  }
+
+  @include bp-up(sm) {
+    flex-basis: 30%;
+  }
+
+  @include bp-up(md) {
+    flex-basis: 23%;
+  }
+
+  @include bp-up(lg) {
+    flex-basis: 18%;
+  }
+
+  @include bp-up(xxl) {
+    flex-basis: 13%;
+  }
+
+  .manga-item {
+    width: 100%;
+
+    &-thumbnail {
+      width: fit-content;
+      height: fit-content;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+    }
+
+    &-title {
+      span {
+        font-size: 1.8rem;
+        color: var(--color-white);
+
+        @media screen and (min-width: 420px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

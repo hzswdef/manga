@@ -1,7 +1,7 @@
 ### GET request to get Mangas.
-GET https://react.ddev.site/api/manga?include=thumbnail
+GET https://react.ddev.site/api/manga?include=thumbnail&jsonapi_include=1
 Accept: application/json
 
 ### GET request to get specific Manga by NID.
-GET https://react.ddev.site/api/manga?filter[nid]=1&include=thumbnail,chapters.frames,chapters.frames.frame
+GET https://react.ddev.site/api/manga?filter[nid]=1&include=thumbnail,chapters.frames,chapters.frames.frame&jsonapi_include=1
 Accept: application/json
