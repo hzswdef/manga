@@ -44,7 +44,14 @@ jobs:
 
       - name: Install ESlint
         run: |
-          yarn --cwd ./.github/tools/ add --dev eslint-config-drupal-bundle@1.2.0 eslint
+          yarn --cwd ./.github/tools/ add --dev \
+          eslint-config-drupal-bundle@1.2.0 \
+          eslint
+          @typescript-eslint/eslint-plugin
+          @typescript-eslint/parser
+          eslint-plugin-react-hooks
+          eslint-plugin-react-refresh
+          typescript-eslint
 
       - name: Installing reviewdog
         uses: reviewdog/action-setup@v1
@@ -63,7 +70,7 @@ jobs:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ./.github/tools/node_modules/.bin/eslint `cat /tmp/check` \
-          --no-error-on-unmatched-pattern |
+          --ext tsx --report-unused-disable-directives --max-warnings 0 |
           reviewdog -f=eslint -name="ESLint" \
           -reporter=github-pr-review \
           -fail-on-error -filter-mode=nofilter -tee

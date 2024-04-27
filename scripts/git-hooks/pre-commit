@@ -42,7 +42,7 @@ fi
 ### ESLint section.
 ###
 NODE_BIN="node"
-ESLINT_BIN="./web-react/node_modules/.bin/eslint"
+ESLINT_BIN="./app/node_modules/.bin/eslint"
 
 # Do not run the script if ESLint isn't installed.
 ESLINT_VERSION=$($NODE_BIN $ESLINT_BIN --env-info | grep "Global ESLint version")
