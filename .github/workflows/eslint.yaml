@@ -70,6 +70,8 @@ jobs:
         run: |
           ./.github/tools/node_modules/.bin/eslint `cat /tmp/check` \
           --ext tsx --report-unused-disable-directives --max-warnings 0 |
+          echo "TEST" |
+          echo "/tmp/check" |
           reviewdog -f=eslint -name="ESLint" \
           -reporter=github-pr-review \
           -fail-on-error -filter-mode=nofilter -tee
