@@ -3,7 +3,6 @@ import HomePage from "../components/page/home/HomePage";
 import MangaPage from "../components/page/manga/MangaPage";
 import NotFound from "../components/page/NotFound";
 
-
 const AppRoutes = () =>
   <Routes>
     <Route path="/" element={ <HomePage /> } />
