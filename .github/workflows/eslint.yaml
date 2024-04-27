@@ -45,9 +45,8 @@ jobs:
       - name: Install ESlint
         run: |
           yarn --cwd ./.github/tools/ add --dev \
-          eslint-config-drupal-bundle@1.2.0 \
+          eslint-config-drupal-bundle \
           eslint
-          @typescript-eslint/eslint-plugin
           @typescript-eslint/parser
           eslint-plugin-react-hooks
           eslint-plugin-react-refresh
