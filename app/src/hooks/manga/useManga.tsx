@@ -15,6 +15,11 @@ const useManga = (id: string): SingleManga => {
       });
   }, [id]);
 
+  const test = 0;
+
+
+
+
   return manga;
 }
 
