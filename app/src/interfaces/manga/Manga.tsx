@@ -1,10 +1,16 @@
-export interface MangaType {
-  data: MangaItemType[];
-  included: [];
+export interface SingleManga {
+  statusCode: number;
+  data?: MangaItem;
   isLoading: boolean;
 }
 
-export interface MangaItemType {
+export interface MultipleMangas {
+  statusCode: number;
+  data?: MangaItem[];
+  isLoading: boolean;
+}
+
+export interface MangaItem {
   id: string,
   title: string;
   alternative_titles: string[];
@@ -13,16 +19,12 @@ export interface MangaItemType {
   manga_status: string;
   manga_type: string;
   chapters: {
-    data: MangaItemChapterType[]
-  }
+    id: string;
+  }[]
   thumbnail: {
     id: string;
     uri: {
       url: string;
     }
   }
-}
-
-interface MangaItemChapterType {
-
 }

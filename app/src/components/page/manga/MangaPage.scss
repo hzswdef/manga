@@ -1,0 +1,55 @@
+@import "../../../scss/responsive";
+
+.manga-page {
+  display: flex;
+  flex-direction: column;
+
+  @include bp-up(sm) {
+    flex-direction: row;
+  }
+
+  > h1.manga-title.mobile-only {
+    order: 1;
+    margin-bottom: 16px;
+
+    @include bp-up(sm) {
+      display: none;
+      order: unset;
+    }
+  }
+
+  .manga-page-section-left {
+    order: 3;
+
+    @include bp-up(sm) {
+      order: unset;
+      flex-basis: 75%;
+    }
+
+    h1.manga-title {
+      display: none;
+
+      @include bp-up(sm) {
+        display: block;
+      }
+    }
+  }
+
+  .manga-page-section-right {
+    order: 2;
+    flex-basis: 100%;
+
+    @include bp-up(sm) {
+      order: unset;
+      flex-basis: 25%;
+    }
+
+    .manga-thumbnail {
+      img {
+        border-radius: 12px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

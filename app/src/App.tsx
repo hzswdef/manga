@@ -1,5 +1,5 @@
-import AppRoutes from "./routes/Routes";
-import Base from "./components/Base";
+import AppRoutes from "@routes/Routes";
+import Base from "@components/Base";
 
 function App() {
   return (

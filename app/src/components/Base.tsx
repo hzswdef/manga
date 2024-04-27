@@ -1,22 +1,24 @@
 import { ReactNode } from "react";
-import Header from "./region/Header";
-import Footer from "./region/Footer";
-import Container from "./miscellaneous/Container";
+import Header from "@components/region/Header";
+import Footer from "@components/region/Footer";
+import Container from "@components/miscellaneous/Container";
 import "./Base.scss";
 
-type Props = {
-  children: ReactNode
+interface Props {
+  children: ReactNode;
 }
 
 const Base = (props: Props) => {
   return (
     <div className="wrapper">
       <Header/>
+
       <div className="content">
         <Container>
           {props.children}
         </Container>
       </div>
+
       <Footer/>
     </div>
   );

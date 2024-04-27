@@ -11,6 +11,7 @@ const Header = () => {
       <Container>
         <Link to="/" className="logo">
           <img src={ Logo } alt={ document.title } />
+
           <span>
             { siteName }
           </span>

@@ -11,7 +11,7 @@ third_party_settings:
     page_limit: 50
 id: paragraph--manga_chapter
 disabled: false
-path: manga/manga_chapter
+path: manga/chapter
 resourceType: 'Manga - Chapter'
 resourceFields:
   id:
@@ -21,7 +21,7 @@ resourceFields:
     enhancer:
       id: ''
   uuid:
-    disabled: false
+    disabled: true
     fieldName: uuid
     publicName: uuid
     enhancer:

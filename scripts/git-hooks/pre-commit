@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+. "$(dirname "$0")"/_config.sh
+
+#
+# This script performs code quality checks:
+# - PHPCS checks PHP and YAML files.
+# - Eslint checks JavaScript files.
+# - File modes checks.
+
+### Prepare list of the files in this commit.
+FILES=$(git diff --cached --name-only --diff-filter=ACM HEAD)
+if [[ "$FILES" == "" ]]; then
+  exit 0;
+fi
+
+###
+### PHPCS section.
+###
+PHPCS_BIN=./vendor/bin/phpcs
+
+# Do not run the script if phpcs isn't installed.
+if [[ ! -f "$PHPCS_BIN" ]]; then
+  printf "${RED}PHPCS does not exist on your filesystem.${NO_COLOR}\n"
+  echo "Please run 'composer install' to install all dependencies."
+  exit 1
+fi
+
+# The standards, directories and extensions are configured
+# at phpcs.xml in the root folder of the project.
+pwd
+PHPCS_OUTPUT=$($PHPCS_BIN --standard=./scripts/phpcs.xml -q --colors --encoding=utf-8 $FILES)
+
+# Check the exit status of the most recently executed foreground pipeline.
+if [ $? != 0 ]; then
+  printf "\n\n  ${RED}[ERROR] Coding standards checks failed${NO_COLOR} for files in this commit.\n\n"
+  echo "${PHPCS_OUTPUT}"
+  printf "\n\n  ${RED}[ERROR] Commit failed.${NO_COLOR} Please fix all Coding Standards!\n\n"
+  exit 1
+fi
+
+###
+### ESLint section.
+###
+NODE_BIN="node"
+ESLINT_BIN="./web-react/node_modules/.bin/eslint"
+
+# Do not run the script if ESLint isn't installed.
+ESLINT_VERSION=$($NODE_BIN $ESLINT_BIN --env-info | grep "Global ESLint version")
+if [[ "$ESLINT_VERSION" == "" ]]; then
+  printf "${RED}ESLint does not installed on this project.${NO_COLOR}\n"
+  echo "Instructions: https://www.drupal.org/node/1955232#s-checking-custom-javascript-with-eslint"
+  exit 1
+fi
+
+# Get tsx files (added to commit) to process with ESLint.
+ESLINT_FILES=$(echo "$FILES" | grep -E '\.tsx$')
+ESLINT_OUTPUT=$($NODE_BIN $ESLINT_BIN $ESLINT_FILES)
+
+# Check the exit status of the most recently executed foreground pipeline.
+if [ $? != 0 ]; then
+  printf "\n\n  ${RED}[ERROR] ESLINT checks failed${NO_COLOR} for files in this commit.\n\n"
+  echo "${ESLINT_OUTPUT}"
+  printf "\n\n  ${RED}[ERROR] Commit failed.${NO_COLOR} Please fix all Coding Standards!\n\n"
+  exit 1
+fi
+exit $STATUS

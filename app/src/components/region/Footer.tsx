@@ -9,6 +9,7 @@ const Footer = () => {
         <span>
           Manga website build with React & Drupal for dev stack learning purposes.
         </span>
+
         <Link to="https://github.com/hzswdef/manga" target="_blank" rel="noopener noreferrer">
           GitHub
         </Link>

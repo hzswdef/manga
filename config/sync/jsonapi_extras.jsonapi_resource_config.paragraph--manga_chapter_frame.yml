@@ -21,7 +21,7 @@ resourceFields:
     enhancer:
       id: ''
   uuid:
-    disabled: false
+    disabled: true
     fieldName: uuid
     publicName: uuid
     enhancer:

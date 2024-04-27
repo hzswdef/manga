@@ -1,6 +1,6 @@
 import "./LoadingProgress.scss"
 
 const LoadingProgress = () =>
-  <h1>Loading...</h1>
+  <span className="loader"></span>
 
 export default LoadingProgress;

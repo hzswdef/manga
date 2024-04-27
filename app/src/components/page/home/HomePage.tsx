@@ -1,5 +1,5 @@
-import useTitle from "../../../hooks/UseTitle.tsx";
-import MangaCollection from "../../MangaCollection";
+import useTitle from "@hooks/UseTitle";
+import MangaCollection from "@components/MangaCollection";
 import "./HomePage.scss";
 
 const HomePage = () => {
@@ -8,6 +8,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <h1 className="home-page-title">Home page</h1>
+
       <MangaCollection />
     </div>
   );

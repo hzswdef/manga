@@ -1,9 +1,9 @@
-import "./MangaCollectionItem.scss";
-import { MangaItemType } from "../types/MangaType.tsx";
 import { Link } from "react-router-dom";
+import { MangaItem } from "@interfaces/manga/Manga";
+import "./MangaCollectionItem.scss";
 
 type MangaCollectionItemProps = {
-  item: MangaItemType;
+  item: MangaItem;
 }
 
 const MangaCollectionItem = (props: MangaCollectionItemProps) =>
