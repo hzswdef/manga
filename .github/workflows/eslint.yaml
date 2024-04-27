@@ -47,10 +47,11 @@ jobs:
           yarn --cwd ./.github/tools/ add --dev \
           eslint-config-drupal-bundle \
           eslint \
-          @typescript-eslint/parser \
           eslint-plugin-react-hooks \
           eslint-plugin-react-refresh \
-          typescript-eslint
+          typescript-eslint \
+          @typescript-eslint/eslint-plugin \
+          @typescript-eslint/parser
 
       - name: Installing reviewdog
         uses: reviewdog/action-setup@v1
